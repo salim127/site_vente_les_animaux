@@ -1,0 +1,12 @@
+<div *ngIf="panier && panier.length > 0">
+    <h2>Votre Panier</h2>
+    <ul>
+      <li *ngFor="let produit of panier">
+        {{ produit.age}} - <img [src]="produit.image" class="card-img-top" alt="Image Produit"> - {{ produit.prix }} $
+        <button (click)="supprimerDuPanier(produit.id)">Supprimer</button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="panier && panier.length === 0">
+    <p>Votre panier est vide.</p>
+  </div>

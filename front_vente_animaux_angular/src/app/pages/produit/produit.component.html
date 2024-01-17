@@ -1,0 +1,34 @@
+<body>
+    <div class="container">
+      <h1>les listes des animaux</h1>
+      <table class="table">
+        <thead>
+          <tr >
+            <th>image</th>
+            <th>age</th>
+            <th>prix</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produit of produits ">
+            <td><img src={{produit.image}} width="22%" /></td>
+            <td>{{produit.age}}ans</td>
+            <td>${{produit.prix}}</td>
+            <td>
+              <button class="btn btn-danger mr-2"  (click)="supprimer(produit.id)">Supprimer</button>
+              <button class="btn btn-warning" (click)="modifier(produit.id)">Modifier</button>
+            </td>
+            
+          </tr>
+     
+          </tbody>
+          </table>
+<button class="btn btn-primary " routerLink="/ajouterproduit"><i class="fas fa-plus"></i> Ajouter</button>
+
+
+          <br><br><br>
+
+          <a href="/dashbord" title="Précédent" class="btn btn-outline-primary">
+            <i class="fa fa-arrow-left"></i> Précédent
+         </a>

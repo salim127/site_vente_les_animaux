@@ -1,0 +1,34 @@
+
+<body>
+    <div class="container">
+      <h1>Les lists des messages</h1>
+
+      <table class="table">
+        <thead>
+          <tr >
+            <th>Nom</th>
+            <th>email</th>
+            <th>message</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contacts ">
+            <td>{{contact.nom}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.message}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="supprimer(contact.id)">Supprimer</button>
+            </td>
+          </tr>
+          </tbody>
+          </table>
+
+          <a href="/dashbord" title="Précédent" class="btn btn-outline-primary"><i class="fa fa-arrow-left"></i> Précédent</a>
+         
+
+
+
+
+        </div>
+    </body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Ajouter un Produit</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Ajouter un animal</h2>
+                </div>
+                <div class="card-body">
+
+                    <form (ngSubmit)="onSubmit()">
+                        <!-- Champ Image -->
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="text" class="form-control" id="image" placeholder="URL de l'image" [(ngModel)]="produit.image" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+
+                        <!-- Champ Prix -->
+                        <div class="form-group">
+                            <label for="prix">Prix</label>
+                            <input type="text" class="form-control" id="prix" placeholder="Prix" [(ngModel)]="produit.prix" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+
+                        <!-- Champ Âge -->
+                        <div class="form-group">
+                            <label for="age">Âge</label>
+                            <input type="text" class="form-control" id="age" placeholder="Âge" [(ngModel)]="produit.age" [ngModelOptions]="{standalone: true}" required>
+                        </div>
+
+                        <!-- Boutons Enregistrer et Annuler -->
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                            <a routerLink="/produit" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
